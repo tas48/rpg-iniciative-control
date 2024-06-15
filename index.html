@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Iniciativa - RPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Iniciativa - RPG</h1>
+        <div id="grid-container" class="grid-container">
+            <!-- Jogadores Fixos -->
+            <div class="player" style="--grid-column: 1; --grid-row: 1;">
+                <input type="text" value="Sylvar Moon" disabled>
+                <input type="number" value="0">
+            </div>
+            <div class="player" style="--grid-column: 2; --grid-row: 1;">
+                <input type="text" value="Catherine Bloodstain" disabled>
+                <input type="number" value="0">
+            </div>
+            <div class="player" style="--grid-column: 3; --grid-row: 1;">
+                <input type="text" value="Sandro Fumaça" disabled>
+                <input type="number" value="0">
+            </div>
+            <div class="player" style="--grid-column: 4; --grid-row: 1;">
+                <input type="text" value="Hiro Fukanaga" disabled>
+                <input type="number" value="0">
+            </div>
+            <div class="player" style="--grid-column: 5; --grid-row: 1;">
+                <input type="text" value="Yiren Frane" disabled>
+                <input type="number" value="0">
+            </div>
+
+            <!-- NPCs (campos variáveis) serão adicionados aqui dinamicamente -->
+        </div>
+        
+        <!-- Adicionar Monstro -->
+        <div id="npcs">
+            <h2>Adicionar Monstro</h2>
+            <label for="npcInput">Nome, Iniciativa:</label>
+            <input type="text" id="npcInput" placeholder="Nome, Iniciativa">
+            <button onclick="addMonster()">Adicionar</button>
+        </div>
+
+        <button onclick="sortInitiative()">Ordenar</button>
+        <button onclick="nextTurn()">Mover Turno</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
